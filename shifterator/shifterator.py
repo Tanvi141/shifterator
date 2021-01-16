@@ -368,7 +368,9 @@ class Shift:
             :top_n
         ]
         type_scores.reverse()
-
+        # with open("/home/tanvi/Desktop/Honors/Movement_Tweets/caa_graphs/word_shift_graph/shift_op.txt", "w") as f:
+        #     f.write(str(type_scores))
+            
         # Get bar heights and colors
         bar_dims = plotting.get_bar_dims(type_scores, self.norm, kwargs)
         bar_colors = plotting.get_bar_colors(type_scores, kwargs)
@@ -459,3 +461,6 @@ class Shift:
         if show_plot:
             plt.show()
         return ax
+
+    def get_the_damn_scores(self):
+        return self.type2freq_1, self.type2freq_2, self.type2score_1, self.type2score_2

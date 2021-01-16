@@ -411,3 +411,7 @@ class JSDivergenceShift(Shift):
             all_pos_contributions=all_pos_contributions,
             **kwargs
         )
+
+    
+    def get_the_damn_scores(self):
+        return self.type2p_1, self.type2p_2, self.type2m       
